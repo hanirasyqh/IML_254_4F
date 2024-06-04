@@ -1,0 +1,140 @@
+<html>
+<head>
+<title> honey's website </title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="resource/css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+
+<div class="main">
+<div class="header">
+   <h1>𓍼💭MY PERSONAL SPACE💭𓍼 </h1>
+</div>
+
+<div class="topnav">
+   <a class="active" href="index.html">Home</a>
+   <a href="aboutme.html">About Me</a>
+   <a href="family.html">Family</a>
+   <a href="hobbies.html">Hobbies</a>
+   <a href="dreamplaces.html">Dream Places</a>
+   <a href="artists.html">Artists</a>
+   <a href="moments.html">Moments</a>
+   <a href="gallery.html">Gallery</a>
+   <a href="https://www.instagram.com/syiqahirdina_" target="_blank" class="social"><i class="fab fa-instagram"></i></a>
+   <a href="https://twitter.com/NCTsmtown_127" target="_blank" class="social"><i class="fab fa-twitter"></i></a>
+   <a href="https://api.whatsapp.com/send?phone=60176360100" target="_blank" class="social"><i class="fab fa-whatsapp"></i></a>
+</div>
+
+<div id="welcomeMessage" class="welcome-message"></div>
+
+<br>
+
+<div class="image-container">
+   <a href="aboutme.html">
+   <img src="resource/image/hani.jpg" width="390px" height="490px" alt="hani"></a>
+
+<div class="text">
+   <h1>⭒𓍼HANI RASYIQAH IRDINA𓍼⭒ </h1>
+
+<div class="text2">
+<b><p>Welcome to Honey's personal website!!! ⋆˚🐾˖° <br> I've created this website to share a bit of myself with you. I'm thrilled to have you here. This space is where I share my personal details, moments, and musings with the world. Feel free to explore, get to know me better, and perhaps find a little inspiration along the way. Make yourself at home, and thank you for joining me on this journey!°🌊⋆𓆝⭒˚｡🦪⋆ </b></p>
+
+</div></div></div>
+<br>
+
+<div class="text3">
+   <h2>.☘︎ ݁˖𓍼Just a gentle tap on the image will whisk you away to another delightful corner of the web!𓍼.☘︎ ݁˖</h2>
+<br>
+
+<center>
+<div class="photo-collage">
+  <figure>
+    <a href="family.html"><img src="resource/image/icon1.jpg" alt="Image 1"></a>
+    <figcaption>▹MY PRECIOUS FAMILY ⤴</figcaption>
+  </figure>
+
+  <figure>
+    <a href="hobbies.html"><img src="resource/image/icon2.jpg" alt="Image 2"></a>
+    <figcaption>▹HOBBIES ⤴</figcaption>
+  </figure>
+
+  <figure>
+    <a href="dreamplaces.html"><img src="resource/image/icon3.jpg" alt="Image 3"></a>
+    <figcaption>▹DREAM PLACES ⤴</figcaption>
+  </figure>
+
+  <figure>
+    <a href="artists.html"><img src="resource/image/icon4.jpg" alt="Image 4"></a>
+    <figcaption>▹FAV ARTISTS ⤴</figcaption>
+  </figure>
+
+  <figure>
+    <a href="moments.html"><img src="resource/image/icon5.jpg" alt="Image 5"></a>
+    <figcaption>▹MOMENTS ⤴</figcaption>
+  </figure>
+
+  <figure>
+    <a href="gallery.html"><img src="resource/image/icon6.jpg" alt="Image 6"></a>
+    <figcaption>▹GALLERY ⤴</figcaption>
+  </figure>
+</div>
+</center>
+
+
+<br><br><br><br>
+
+
+<footer>
+<p>©2024 HANI RASYIQAH IRDINA<br>
+All Rights Reserved.<br>
+</footer>
+
+<script>
+// Function to set a cookie
+   function setCookie(name, value, days) {
+    let date = new Date();
+    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+    let expires = "expires=" + date.toUTCString();
+    document.cookie = name + "=" + value + ";" + expires + ";path=/";
+}
+
+// Function to get a cookie
+   function getCookie(name) {
+   let decodedCookie = decodeURIComponent(document.cookie);
+   let cookieArray = decodedCookie.split(';');
+   name = name + "=";
+   for (let i = 0; i < cookieArray.length; i++) {
+   let cookie = cookieArray[i];
+   while (cookie.charAt(0) == ' ') {
+   cookie = cookie.substring(1);
+}
+   if (cookie.indexOf(name) == 0) {
+   return cookie.substring(name.length, cookie.length);
+   }
+}
+  return "";
+}
+
+// Function to display the welcome message
+   function displayWelcomeMessage() {
+   let welcomeMessageDiv = document.getElementById('welcomeMessage');
+   let user = getCookie('username');
+   if (user != "") {
+   welcomeMessageDiv.innerHTML = "<h2>Welcome back, " + user + "!</h2>";
+}  else {
+   user = prompt("Please enter your name:", "");
+   if (user != "" && user != null) {
+   setCookie('username', user, 7);
+   welcomeMessageDiv.innerHTML = "<h2>Welcome to my website, " + user + "!</h2>";
+}
+}
+}
+
+// Call the function to display the welcome message when the page loads
+window.onload = displayWelcomeMessage;
+</script>
+
+</body>
+</html>
