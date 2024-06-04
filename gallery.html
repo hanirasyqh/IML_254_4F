@@ -1,0 +1,124 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="resource/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+<div class="main">
+<div class="header">
+   <h1>𓍼💭MY PERSONAL SPACE💭𓍼</h1>
+</div>
+
+<div class="topnav">
+   <a href="index.html">Home</a>
+   <a href="aboutme.html">About Me</a>
+   <a href="family.html">Family</a>
+   <a href="hobbies.html">Hobbies</a>
+   <a href="dreamplaces.html">Dream Places</a>
+   <a href="artists.html">Artists</a>
+   <a href="moments.html">Moments</a>
+   <a class="active" href="gallery.html">Gallery</a>
+   <a href="https://www.instagram.com/syiqahirdina_" target="_blank" class="social"><i class="fab fa-instagram"></i></a>
+   <a href="https://twitter.com/NCTsmtown_127" target="_blank" class="social"><i class="fab fa-twitter"></i></a>
+   <a href="https://api.whatsapp.com/send?phone=60176360100" target="_blank" class="social"><i class="fab fa-whatsapp"></i></a>
+</div>
+
+
+<br>
+<!-- Header -->
+<div class="headergallery" id="myHeader">
+  <h1>HONEY'S GALLERY</h1>
+  <b><p>MY FAVORITE PEOPLE THROUGH MY POINT OF VIEW~</p></b>
+  <p>Click on the buttons to change the grid view.</p>
+  <button class="btn active" onclick="setGrid(3)">3</button>
+  <button class="btn" onclick="setGrid(4)">4</button>
+</div>
+
+<!-- Photo Grid -->
+<div class="row"> 
+  <div class="column">
+    <img src="resource/image/sky.jpg" style="width:100%">
+    <img src="resource/image/1.jpg" style="width:100%">
+    <img src="resource/image/15.jpg" style="width:100%">
+    <img src="resource/image/sky4.jpg" style="width:100%">
+    <img src="resource/image/20.jpg" style="width:100%">
+    <img src="resource/image/sky6.jpg" style="width:100%">
+    <img src="resource/image/6.jpg" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="resource/image/sky2.jpg" style="width:100%">
+    <img src="resource/image/2.jpg" style="width:100%">
+    <img src="resource/image/4.jpg" style="width:100%">
+    <img src="resource/image/3.jpg" style="width:100%">
+    <img src="resource/image/sky10.jpg" style="width:100%">
+    <img src="resource/image/7.jpg" style="width:100%">
+    <img src="resource/image/sky14.jpg" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="resource/image/sky3.jpg" style="width:100%">
+    <img src="resource/image/5.jpg" style="width:100%">
+    <img src="resource/image/sky9.jpg" style="width:100%">
+    <img src="resource/image/sky11.jpg" style="width:100%">
+    <img src="resource/image/22.jpg" style="width:100%">
+    <img src="resource/image/sky13.jpg" style="width:100%">
+    <img src="resource/image/sky7.jpg" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="resource/image/sky5.jpg" style="width:100%">
+    <img src="resource/image/9.jpg" style="width:100%">
+    <img src="resource/image/10.jpg" style="width:100%">
+    <img src="resource/image/11.jpg" style="width:100%">
+    <img src="resource/image/12.jpg" style="width:100%">
+    <img src="resource/image/13.jpg" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="resource/image/14.jpg" style="width:100%">
+    <img src="resource/image/15.jpg" style="width:100%">
+    <img src="resource/image/16.jpg" style="width:100%">
+    <img src="resource/image/24.jpg" style="width:100%">
+    <img src="resource/image/18.jpg" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="resource/image/19.jpg" style="width:100%">
+    <img src="resource/image/8.jpg" style="width:100%">
+    <img src="resource/image/21.jpg" style="width:100%">
+    <img src="resource/image/sky12.jpg" style="width:100%">
+    <img src="resource/image/23.jpg" style="width:100%">
+    <img src="resource/image/17.jpg" style="width:100%">
+  </div>
+</div>
+
+<script>
+const elements = document.getElementsByClassName("column");
+
+function setGrid(columns) {
+for (let i = 0; i < elements.length; i++) {
+elements[i].style.flex = `${100 / columns}%`;
+}
+}
+
+const header = document.getElementById("myHeader");
+const btns = header.getElementsByClassName("btn");
+for (let i = 0; i < btns.length; i++) {
+btns[i].addEventListener("click", function () {
+const current = document.getElementsByClassName("active");
+if (current.length > 0) {
+current[0].className = current[0].className.replace(" active", "");
+}
+this.className += " active";
+});
+}
+</script>
+
+<br><br><br><br>
+
+<footer>
+<p>©2024 HANI RASYIQAH IRDINA<br>
+ All Rights Reserved.</p>
+</footer>
+</div>
+</body>
+</html>
